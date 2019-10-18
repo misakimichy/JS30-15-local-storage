@@ -12,6 +12,8 @@
         };
         items.push(item);
         populateList(items, itemList);
+        // add the list to the local storage
+        localStorage.setItem('items', JSON.stringify(items));
         e.currentTarget.reset();
     };
 
@@ -19,7 +21,10 @@
     const populateList = (plates = [], platesList) => {
         platesList.innerHTML = plates.map((plate, i) => {
             return `
-                <li><label><input type="checkbox" data-index=${i} ${plate.done ? 'checked' : ''} />${plate.text}</label></li>
+                <li>
+                    <input type="checkbox" data-index=${i} ${plate.done} ? 'checked' : '' />
+                    <label>${plate.text}</label>
+                </li>
             `;
         }).join('');
     };
