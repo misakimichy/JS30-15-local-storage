@@ -1,8 +1,9 @@
 (function(){
     const addItems = document.querySelector('.add-items');
     const itemList = document.querySelector('.plates');
-    const items = [];
-
+    // Get the 'items' in the local storage and if they cannot find it, create the empty array.
+    const items = JSON.parse(localStorage.getItem('items')) || [];
+    
     const addItem = (e) => {
         e.preventDefault();
         const text = (e.currentTarget.querySelector('[name=item]')).value;
@@ -22,12 +23,13 @@
         platesList.innerHTML = plates.map((plate, i) => {
             return `
                 <li>
-                    <input type="checkbox" data-index=${i} ${plate.done} ? 'checked' : '' />
-                    <label>${plate.text}</label>
+                    <input type="checkbox" data-index=${i} id="item${i}" ${plate.done} ? 'checked' : '' />
+                    <label for="item${i}">${plate.text}</label>
                 </li>
             `;
         }).join('');
     };
 
     addItems.addEventListener('submit', addItem);
+    populateList(items, itemList);
 }());
