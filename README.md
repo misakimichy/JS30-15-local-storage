@@ -16,7 +16,7 @@ Please check the challenge from [JavaScript30](http://wesbos.com/javascript30/).
 - Each items are checkboxes. A user can toggle the items.
     
 
-## Setup/Installation Requirements
+## Setup/Installation
 
 1. Clone this repo:
 ```
@@ -26,10 +26,6 @@ $ git clone https://github.com/misakimichy/JS30-15-local-storage.git
 2. Navigate to the top level of the cloned directory.
 
 3. Open `index.html` with your preferred web browser.
-
-4. Open the console on your browser.
-
-5. Please check both the `main.js` and console.
 
 ## Known Bugs
 * No known bugs at this time.
