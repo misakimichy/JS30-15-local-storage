@@ -1,6 +1,6 @@
 # 15. Local Storage
 
-#### _JLocal Storage by JavaScript30 10/18/19_
+#### _Local Storage by JavaScript30 10/17/19_
 
 ## Description
 This is Local Storage, 15th application out of 30 by 30 day Vanilla JavaScript Coding Challenge by Wes Bos.<br>
